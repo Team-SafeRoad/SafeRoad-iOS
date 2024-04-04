@@ -8,8 +8,8 @@
 import UIKit
 
 enum TabBarItemType: Int, CaseIterable {
-    case myLocation
-    case news
+    case home
+    case actionList
     case myPage
 }
 
@@ -17,23 +17,23 @@ extension TabBarItemType {
     
     var unSelectedIcon: UIImage {
         switch self {
-        case .myLocation:
-            return ImageLiterals.TabBar.myLocation_Off
-        case .news:
-            return ImageLiterals.TabBar.News_ic_Off
+        case .home:
+            return ImageLiterals.TabBar.home
+        case .actionList:
+            return ImageLiterals.TabBar.actionList
         case .myPage:
-            return ImageLiterals.TabBar.myPage_ic_Off
+            return ImageLiterals.TabBar.mypage
         }
     }
     
     var selectedIcon: UIImage {
         switch self {
-        case .myLocation:
-            return ImageLiterals.TabBar.myLocation_On
-        case .news:
-            return ImageLiterals.TabBar.News_ic_On
+        case .home:
+            return ImageLiterals.TabBar.selected_home
+        case .actionList:
+            return ImageLiterals.TabBar.selected_actionList
         case .myPage:
-            return ImageLiterals.TabBar.myPage_ic_On
+            return ImageLiterals.TabBar.selected_mypage
         }
     }
     
